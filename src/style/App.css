@@ -41,13 +41,12 @@ nav {
   gap: 3rem;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  color: var(--clr-grey);
-  font-size: 1.25rem;
-  font-weight: 500;
+.nav-items span {
   cursor: pointer;
+}
+
+.nav-items span:hover {
+  color: black;
 }
 
 .nav-item:hover {
@@ -59,7 +58,38 @@ nav {
   cursor: pointer;
 }
 
+.nav-menu {
+  display: none;
+  height: 100%;
+  width: 50px;
+  position: relative;
+}
 
-@media (max-width: 767px) {
+.nav-menu span {
+  position: absolute;
+  right: 0px;
+  height: 3px;
+  background: black;
+}
 
+.nav-menu span:nth-child(1){
+  top: 33.33%;
+  width: 32px;
+}
+
+.nav-menu span:nth-child(2){
+  top: 66.66%;
+  width: 16px;
+}
+
+@media (max-width: 1200px) {
+  .nav-items {
+    display:none;
+  }
+  nav {
+    padding: 0 2rem;
+  }
+  .nav-menu {
+    display: inherit;
+  }
 }
