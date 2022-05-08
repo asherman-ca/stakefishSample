@@ -1,30 +1,61 @@
+/* Resets */
+
+* {
+	box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	color: #000000;
+}
+
+/* Utils */
+
 :root {
   --clr-green: #82D318;
   --alt-green: #CBFF00;
 
   --clr-grey: #81899D;
-  --alt-grey: #7C8499;
   --bg-grey: #FAFBFC;
+  --alt-grey: #7C8499;
 }
 
-.ml-auto {
-  margin-left: auto;
+.bg-white {
+  background-color: white;
 }
 
-body {
-  min-height: 100vh;
-  background-color: var(--bg-grey);
+.flex {
+  display: flex;
 }
 
 .container {
-  width: 100%;
+  min-height: 100vh;
+  padding-top: 80.43px;
   display: flex;
   justify-content: center;
+  overflow-y: overlay;
 }
 
-/* Nav */
+body {
+  background-color: var(--bg-grey);
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  font-family: Montserrat, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Nav Component */
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80.43px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -37,7 +68,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 1rem 2rem;
+  padding: 1rem 15px;
 }
 
 .nav-items {
@@ -56,10 +87,6 @@ nav {
 }
 
 .nav-items span:hover {
-  color: black;
-}
-
-.nav-item:hover {
   color: black;
 }
 
@@ -99,21 +126,49 @@ nav {
   }
 }
 
-/* ExchangeList */
+/* ExchangeList Page */
 
 .exchangeList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 15px;
+}
+
+.exchangeListHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  color: var(--clr-grey);
+}
+
+.exchangeListTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.exchangeListTable {
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
-  padding: 1rem 2rem;
 }
 
-/* ExchangeItem */
+/* ExchangeItem Component */
 
 .exchangeItem {
   width: 25%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.exchangeItemContent {
+  height: 100%;
+  background: white;
 }
 
 @media (max-width: 570px) {
@@ -122,11 +177,12 @@ nav {
   }
 }
 
-/* ExchangeView */
+/* ExchangeView Page */
 
 .exchangeView {
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
-  padding: 1rem 2rem;
+  padding: 1rem 15px;
 }

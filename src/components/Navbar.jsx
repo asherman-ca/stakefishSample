@@ -1,10 +1,10 @@
-import fish from '../assets/main-color.png';
+import mainColorLogo from '../assets/main-color.png';
 
 const Nav = () => {
   return (
     <header>
       <nav>
-        <img className="nav-logo" src={fish} />
+        <img className="nav-logo" src={mainColorLogo} />
         <div className="nav-items">
           <span>Networks</span>
           <span>How It Works</span>

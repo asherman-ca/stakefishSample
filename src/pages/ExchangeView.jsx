@@ -20,9 +20,12 @@ const ExchangeView = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container bg-white">
       <div className="exchangeView">
         {exchange.name}
+        <div className="flex">
+          <Link to={'/'}>back</Link>
+        </div>
       </div>
     </div>
   )

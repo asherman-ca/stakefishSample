@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import ExchangeItem from '../components/ExchangeItem'
 
 const ExchangeList = () => {
@@ -22,12 +21,22 @@ const ExchangeList = () => {
   return (
     <div className="container">
       <div className="exchangeList">
-        {exchanges.map(exchange => (
-          <ExchangeItem 
-            exchange={exchange} 
-            key={exchange.id}
-          />
-        ))}
+        <div className="exchangeListHeader">
+          <span className="exchangeListTitle">
+            Exchanges
+          </span>
+          <span>
+            Top Cryptocurrency Exchanges Ranking by Trust Score - Spot
+          </span>
+        </div>
+        <div className="exchangeListTable">
+          {exchanges.map(exchange => (
+            <ExchangeItem 
+              exchange={exchange} 
+              key={exchange.id}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
