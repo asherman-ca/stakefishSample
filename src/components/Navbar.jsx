@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <img className="logo" src={fish} />
+        <img className="nav-logo" src={fish} />
         <div className="nav-items">
           <span>Networks</span>
           <span>How It Works</span>
