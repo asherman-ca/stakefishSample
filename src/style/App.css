@@ -29,6 +29,10 @@ a {
   background-color: white;
 }
 
+.ph-15 {
+  padding: 15px ;
+}
+
 .flex {
   display: flex;
 }
@@ -163,12 +167,78 @@ nav {
 .exchangeItem {
   width: 25%;
   padding: 0 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  font-size: 1.25rem;
+  color: var(--clr-grey)
 }
 
 .exchangeItemContent {
   height: 100%;
   background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exchangeItemContent:hover {
+  box-shadow: rgb(125 132 153 / 4%) 0px 2px 4px 0px, rgb(125 132 153 / 20%) 0px 4px 18px 0px;
+  transform: scale(1.03);
+  z-index: 5;
+}
+
+.exchangeItemTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--clr-grey);
+  font-weight: 600;
+}
+
+.exchangeItemName {
+  color: var(--clr-grey);
+  cursor: pointer;
+}
+
+.exchangeItemName:hover {
+  color: black;
+}
+
+.exchangeItemCountry {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.exchangeItemContent img {
+  margin: 3rem 0;
+}
+
+.exchangeItemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.exchangeItemDetails span:nth-child(2) {
+  color: black;
+}
+
+.exchangeItemButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: white;
+  background-color: var(--clr-green);
+  cursor: pointer;
+}
+
+.exchangeItemButton:hover {
+  color: black;
 }
 
 @media (max-width: 570px) {
