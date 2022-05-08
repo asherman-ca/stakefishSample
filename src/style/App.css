@@ -4,6 +4,7 @@
 
   --clr-grey: #81899D;
   --alt-grey: #7C8499;
+  --bg-grey: #FAFBFC;
 }
 
 .ml-auto {
@@ -11,15 +12,23 @@
 }
 
 body {
-  background-color: white;
   min-height: 100vh;
+  background-color: var(--bg-grey);
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Nav */
 
 header {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1.87rem 0;
+  background-color: white;
 }
 
 nav {
@@ -28,7 +37,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 
 .nav-items {
@@ -88,4 +97,36 @@ nav {
   .nav-menu {
     display: inherit;
   }
+}
+
+/* ExchangeList */
+
+.exchangeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+}
+
+/* ExchangeItem */
+
+.exchangeItem {
+  width: 25%;
+}
+
+@media (max-width: 570px) {
+  .exchangeItem {
+    width: 100%;
+  }
+}
+
+/* ExchangeView */
+
+.exchangeView {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
 }

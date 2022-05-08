@@ -1,6 +1,10 @@
 const ExchangeItem = ({exchange}) => {
+  const { id } = exchange
+  console.log(exchange)
   return (
-    <div>{exchange.id}</div>
+    <div className="exchangeItem">
+      {id}
+    </div>
   )
 }
 

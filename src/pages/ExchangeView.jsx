@@ -3,15 +3,15 @@ import { useParams, Link } from 'react-router-dom'
 
 const ExchangeView = () => {
   const params = useParams()
-  const [exchange, setExchange] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [exchange, setExchange] = useState({})
 
   useEffect(() => {
     fetch(`https://api.coingecko.com/api/v3/exchanges/${params.exchangeId}`)
       .then(response => response.json())
-      .then(exchanges => setExchange(exchanges))
+      .then(exchange => setExchange(exchange))
     setLoading(false)
-  }, [])
+  }, [params.exchangeId])
 
   if (loading) {
     return (
@@ -20,9 +20,10 @@ const ExchangeView = () => {
   }
 
   return (
-    <div>
-      {exchange && exchange.name}
-      Exchange
+    <div className="container">
+      <div className="exchangeView">
+        {exchange.name}
+      </div>
     </div>
   )
 }

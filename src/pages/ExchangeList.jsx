@@ -4,7 +4,7 @@ import ExchangeItem from '../components/ExchangeItem'
 
 const ExchangeList = () => {
   const [loading, setLoading] = useState(true)
-  const [exchanges, setExchanges] = useState(null) 
+  const [exchanges, setExchanges] = useState([]) 
 
   useEffect(() => {
       fetch('https://api.coingecko.com/api/v3/exchanges?per_page=10')
@@ -20,15 +20,15 @@ const ExchangeList = () => {
   }
 
   return (
-    <div>
-      {exchanges && exchanges.map(exchange => {
-        return(
+    <div className="container">
+      <div className="exchangeList">
+        {exchanges.map(exchange => (
           <ExchangeItem 
             exchange={exchange} 
             key={exchange.id}
           />
-        )
-      })}
+        ))}
+      </div>
     </div>
   )
 }
