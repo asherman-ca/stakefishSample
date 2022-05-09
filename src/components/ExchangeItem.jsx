@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom'
 
 const ExchangeItem = ({exchange}) => {
-  const { id, name, country, trust_score_rank } = exchange
-  console.log('name', exchange)
+  let { id, name, country, trust_score_rank } = exchange
+  if (name.split(' ')[1] === 'Exchange') {
+    name = name.split(' ')[0]
+  }
+
   return (
     <div className="exchangeItem">
       <div className="exchangeItemContent">
         <div className="exchangeItemTitle">
-          {exchange.id !== 'kraken' ? <a className="exchangeItemName" href={exchange.url}>{name}</a> :
-          <span className="exchangeItemName">{name}</span>}
+          <a className="exchangeItemName" href={exchange.id !== 'kraken' ? exchange.url : "https://www.kraken.com/"} target="_blank" rel="noopener noreferrer">{name} - <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
           <span className="exchangeItemCountry">{country}</span>
         </div>
 

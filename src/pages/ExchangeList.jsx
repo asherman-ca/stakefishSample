@@ -14,7 +14,11 @@ const ExchangeList = () => {
 
   if (loading) {
     return (
-      <div>loading</div>
+      <div className="container">
+        <div className="spinnerBox">
+          <div className="threeQuarterSpinner"></div>
+        </div>
+      </div>
     )
   }
 
