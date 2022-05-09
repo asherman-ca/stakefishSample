@@ -4,7 +4,9 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <img className="nav-logo" src={mainColorLogo} alt="main logo" />
+        <div className="nav-logo-container">
+          <img className="nav-logo" src={mainColorLogo} alt="main logo" />
+        </div>
         <div className="nav-items">
           <span>Networks</span>
           <span>How It Works</span>

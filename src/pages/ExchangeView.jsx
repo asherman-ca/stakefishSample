@@ -21,33 +21,48 @@ const ExchangeView = () => {
   }
 
   let {name, image, facebook_url, year_established, twitter_handle, reddit_url, trust_score_rank, description, country } = exchange;
+  
+  // reshapes a few cases of abnormally formatted API values
   if (name?.split(' ')[1] === 'Exchange') {
     name = name.split(' ')[0]
   }
+  if (facebook_url && facebook_url?.split('').slice(0,4).join('') !== 'http') {
+    facebook_url = `https://www.facebook.com/${facebook_url}/`
+  }
+  if (reddit_url && reddit_url?.split('').slice(0,4).join('') !== 'http') {
+    reddit_url = `https://www.reddit.com${reddit_url}`
+  }
 
+  
   return (
     <div className="container bg-white">
-      <div className="exchangeView">
-        <div className="exchangeViewHeader">
-            <div className="flex">
-              <img src={image} alt="exchange logo" />
-            </div>
-            <div>
-              {name}
-            </div>
-            <div className="flex">
-              {facebook_url && <a href={facebook_url} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-facebook"></i>
-              </a>}
-              {twitter_handle && <a href={`https://twitter.com/${twitter_handle}`} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-twitter"></i>
-              </a>}
-              {reddit_url && <a href={reddit_url} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-reddit"></i>  
-              </a>}
-            </div>
+      <div className="exchange-view">
+        <div className="exchange-view-header">
+          <div className="flex">
+            <img src={image} alt="logo" />
+          </div>
+          <div>
+            <span>{name}</span>
+          </div>
+          <div className="exchange-view-socials">
+            {facebook_url && <a href={facebook_url} 
+                                target="_blank" 
+                                rel="noopener noreferrer">
+              <i className="fa-brands fa-facebook"></i>
+            </a>}
+            {twitter_handle && <a href={`https://twitter.com/${twitter_handle}`} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer">
+              <i className="fa-brands fa-twitter"></i>
+            </a>}
+            {reddit_url && <a href={reddit_url} 
+                              target="_blank" 
+                              rel="noopener noreferrer">
+              <i className="fa-brands fa-reddit"></i>  
+            </a>}
+          </div>
         </div>
-        <div className="exchangeViewDetails">
+        <div className="exchange-view-details">
           <div>
             <span>Location:</span> {country}
           </div>
@@ -61,7 +76,9 @@ const ExchangeView = () => {
             <span>Description:</span> {description}
           </div>}
         </div>
-        <Link className="backButton" to={'/'}><i className="fa-solid fa-chevron-left"></i> back</Link>
+        <div className="flex">
+          <Link className="exchange-view-nav" to={'/'}><i className="fa-solid fa-chevron-left"></i> back</Link>
+        </div>
       </div>
     </div>
   )

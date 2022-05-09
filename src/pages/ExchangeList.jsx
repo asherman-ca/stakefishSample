@@ -21,16 +21,16 @@ const ExchangeList = () => {
 
   return (
     <div className="container">
-      <div className="exchangeList">
-        <div className="exchangeListHeader">
-          <span className="exchangeListTitle">
+      <div className="exchange-list">
+        <div className="exchange-list-header">
+          <span className="exchange-list-title">
             Exchanges
           </span>
           <span>
             Top Cryptocurrency Exchanges Ranked by Trust Score
           </span>
         </div>
-        <div className="exchangeListTable">
+        <div className="exchange-list-table">
           {exchanges.map(exchange => (
             <ExchangeItem 
               exchange={exchange} 
