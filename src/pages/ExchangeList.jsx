@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ExchangeItem from '../components/ExchangeItem'
+import Spinner from '../components/Spinner'
 
 const ExchangeList = () => {
   const [loading, setLoading] = useState(true)
@@ -14,11 +15,7 @@ const ExchangeList = () => {
 
   if (loading) {
     return (
-      <div className="container">
-        <div className="spinnerBox">
-          <div className="threeQuarterSpinner"></div>
-        </div>
-      </div>
+      <Spinner />
     )
   }
 

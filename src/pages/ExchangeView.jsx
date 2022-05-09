@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import Spinner from '../components/Spinner'
 
 const ExchangeView = () => {
   const params = useParams()
@@ -15,7 +16,7 @@ const ExchangeView = () => {
 
   if (loading) {
     return (
-      <div>loading</div>
+      <Spinner />
     )
   }
 
