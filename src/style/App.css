@@ -260,7 +260,64 @@ nav {
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
-  padding: 1rem 15px;
+  padding: 3rem 15px 1rem;
+  gap: 3rem;
+}
+
+.exchangeViewHeader {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 4rem;
+  gap: 2rem;
+}
+
+@media (max-width: 650px) {
+  .exchangeViewHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 4rem;
+  }
+}
+
+.exchangeViewHeader a {
+  display: contents;
+}
+
+.exchangeViewHeader img {
+  width: 75px;
+}
+
+.exchangeViewHeader div {
+  font-weight: bold;
+}
+
+.exchangeViewHeader i {
+  vertical-align: middle;
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+
+.exchangeViewDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.exchangeViewDetails span {
+  color: var(--clr-grey)
+}
+
+.backButton {
+  width: fit-content;
+  font-size: 1.5rem;
+  color: var(--clr-grey);
+}
+
+.backButton:hover {
+  color: black;
 }
 
 /* Spinner */

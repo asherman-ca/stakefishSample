@@ -24,7 +24,7 @@ const ExchangeItem = ({exchange}) => {
         <Link className="exchangeItemButton" to={`/${id}`}>
           <span>View</span>
           <span>
-            {`>`}
+            <i className="fa-solid fa-chevron-right"></i>
           </span>
         </Link>
       </div>
