@@ -47,8 +47,6 @@ const ExchangeView = () => {
 		reddit_url = `https://www.reddit.com${reddit_url}`;
 	}
 
-	console.log(exchange);
-
 	return (
 		<div className='container bg-white'>
 			<div className='exchange-view'>
