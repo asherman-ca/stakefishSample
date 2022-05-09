@@ -34,15 +34,6 @@ const ExchangeView = () => {
             <div><img src={image} alt="exchange logo" /></div>
             <div>
               {name}
-              {/* {facebook_url && <a href={facebook_url} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-facebook"></i>
-              </a>}
-              {twitter_handle && <a href={`https://twitter.com/${twitter_handle}`} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-twitter"></i>
-              </a>}
-              {reddit_url && <a href={reddit_url} target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-reddit"></i>  
-              </a>} */}
             </div>
             <div>
             {facebook_url && <a href={facebook_url} target="_blank" rel="noopener noreferrer">
@@ -58,8 +49,8 @@ const ExchangeView = () => {
         </div>
         <div className="exchangeViewDetails">
           <div><span>Location:</span> {country}</div>
-          {year_established && <div><span>Established:</span> {year_established}</div>}
           <div><span>Trust Rank:</span> {trust_score_rank}</div>
+          {year_established && <div><span>Established:</span> {year_established}</div>}
           {description && <div><span>Description:</span> {description}</div>}
         </div>
         <Link className="backButton" to={'/'}><i className="fa-solid fa-chevron-left"></i> back</Link>

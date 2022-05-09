@@ -10,8 +10,8 @@ const Nav = () => {
           <span>How It Works</span>
           <span>Team</span>
           <span>Jobs</span>
-          <span>More</span>
-          <span>English</span>
+          <span><i className="fa-solid fa-ellipsis" ></i>More</span>
+          <span><i className="fa-solid fa-globe" ></i>English</span>
         </div>
         <div className="nav-menu">
           <span />

@@ -29,8 +29,8 @@ a {
   background-color: white;
 }
 
-.ph-15 {
-  padding: 15px ;
+.mr-s {
+  margin-right: 10px;
 }
 
 .flex {
@@ -92,6 +92,10 @@ nav {
 
 .nav-items span:hover {
   color: black;
+}
+
+.nav-items i {
+  margin-right: 10px;
 }
 
 .nav-logo {
@@ -299,6 +303,9 @@ nav {
   font-size: 2rem;
 }
 
+.exchangeViewHeader i:hover {
+  color: var(--clr-grey);
+}
 
 .exchangeViewDetails {
   display: flex;
