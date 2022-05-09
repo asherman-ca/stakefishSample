@@ -30,6 +30,7 @@ const ExchangeView = () => {
 		trust_score_rank,
 		description,
 		country,
+		url,
 	} = exchange;
 
 	// reshapes a few cases of abnormally formatted API values
@@ -48,7 +49,9 @@ const ExchangeView = () => {
 			<div className='exchange-view'>
 				<div className='exchange-view-header' data-testid='header-element'>
 					<div className='flex'>
-						<img src={image} alt='logo' />
+						<a href={url} target='_blank' rel='noopener noreferrer'>
+							<img src={image} alt='logo' />
+						</a>
 					</div>
 					<div>
 						<span>{name}</span>

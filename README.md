@@ -18,8 +18,8 @@ https://stakefish-sample.vercel.app/
 
 ## Notes
 
-Prettier run through VSCode
-Lint run through create react app
+- Prettier through VSCode
+- Lint through create react app
 
 ## Author Resume Location
 
