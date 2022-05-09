@@ -7,10 +7,20 @@ Top Cryptocurrency Exchanges Ranked by Trust Score
 1. npm install
 2. npm start
 
-## Deployed
+## Testing
+
+1. npm test
+2. a
+
+## Deploy Location
 
 https://stakefish-sample.vercel.app/
 
-## Author resume
+## Notes
 
-asherman-ca.github.com
+Prettier run through VSCode
+Lint run through create react app
+
+## Author Resume Location
+
+https://asherman-ca.github.io
