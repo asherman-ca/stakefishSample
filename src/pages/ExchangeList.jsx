@@ -10,7 +10,8 @@ const ExchangeList = () => {
 	useEffect(() => {
 		fetch('https://api.coingecko.com/api/v3/exchanges?per_page=10')
 			.then((response) => response.json())
-			.then((exchanges) => setExchanges(exchanges));
+			.then((exchanges) => setExchanges(exchanges))
+			.catch((error) => console.log(error));
 		setLoading(false);
 	}, []);
 

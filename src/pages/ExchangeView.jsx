@@ -11,7 +11,8 @@ const ExchangeView = () => {
 	useEffect(() => {
 		fetch(`https://api.coingecko.com/api/v3/exchanges/${params.exchangeId}`)
 			.then((response) => response.json())
-			.then((exchange) => setExchange(exchange));
+			.then((exchange) => setExchange(exchange))
+			.catch((error) => console.log(error));
 		setLoading(false);
 	}, [params.exchangeId]);
 

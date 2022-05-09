@@ -1,83 +1,83 @@
-
 .exchange-item {
-  width: 25%;
-  padding: 0 7.5px;
-  margin-bottom: 15px;
-  font-size: 1.25rem;
-  color: var(--clr-grey)
+	width: 25%;
+	padding: 0 7.5px;
+	margin-bottom: 15px;
+	font-size: 1.25rem;
+	color: var(--clr-grey);
 }
 
 .exchange-item-content {
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	height: 100%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .exchange-item-content:hover {
-  box-shadow: rgb(125 132 153 / 4%) 0px 2px 4px 0px, rgb(125 132 153 / 20%) 0px 4px 18px 0px;
-  transform: scale(1.03);
-  z-index: 5;
+	box-shadow: rgb(125 132 153 / 4%) 0px 2px 4px 0px,
+		rgb(125 132 153 / 20%) 0px 4px 18px 0px;
+	transform: scale(1.03);
+	z-index: 5;
 }
 
 .exchange-item-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem 2rem;
 }
 
 .exchange-item-name {
-  font-weight: 600;
-  color: var(--clr-grey);
-  cursor: pointer;
+	font-weight: 600;
+	color: var(--clr-grey);
+	cursor: pointer;
 }
 
 .exchange-item-name:hover {
-  color: black;
+	color: black;
 }
 
 .exchange-item-content img {
-  margin: 3rem 0;
+	margin: 3rem 0;
 }
 
 .exchange-item-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1rem;
+	font-size: 1rem;
 }
 
 .exchange-item-details span:nth-child(2) {
-  color: black;
+	color: black;
 }
 
 .exchange-item-button {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  font-weight: 500;
-  color: white;
-  background-color: var(--clr-green);
-  cursor: pointer;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	font-weight: 500;
+	color: white;
+	background-color: var(--clr-green);
+	cursor: pointer;
 }
 
 .exchange-item-button:hover {
-  color: var(--clr-grey);
+	color: black;
 }
 
 @media (max-width: 950px) {
-  .exchange-item {
-    width: 50%;
-  }
+	.exchange-item {
+		width: 50%;
+	}
 }
 
 @media (max-width: 570px) {
-  .exchange-item {
-    width: 100%;
-  }
+	.exchange-item {
+		width: 100%;
+	}
 }
