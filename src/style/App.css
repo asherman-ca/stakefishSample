@@ -153,7 +153,7 @@ nav {
 }
 
 .exchangeListTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: black;
 }
@@ -271,16 +271,15 @@ nav {
 .exchangeViewHeader {
   display: flex;
   align-items: center;
-  font-weight: bold;
-  font-size: 4rem;
   flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 3rem;
   gap: 2rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   .exchangeViewHeader {
     font-size: 2rem;
-    gap: 1rem;
   }
 }
 
@@ -300,11 +299,12 @@ nav {
 .exchangeViewHeader i {
   vertical-align: middle;
   margin-right: 2rem;
+  color: var(--clr-grey);
   font-size: 2rem;
 }
 
 .exchangeViewHeader i:hover {
-  color: var(--clr-grey);
+  color: black;
 }
 
 .exchangeViewDetails {

@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const ExchangeItem = ({exchange}) => {
-  let { id, name, country, trust_score_rank } = exchange
+  let { id, name, country, trust_score_rank } = exchange;
   if (name.split(' ')[1] === 'Exchange') {
     name = name.split(' ')[0]
   }
@@ -32,4 +32,4 @@ const ExchangeItem = ({exchange}) => {
   )
 }
 
-export default ExchangeItem
+export default ExchangeItem;
