@@ -1,16 +1,11 @@
 import { Link } from 'react-router-dom';
 import '../style/ExchangeItem.css';
 
-const ExchangeItem = ({ exchange }) => {
-	let { id, name, country, trust_score_rank, url } = exchange;
+import { normalizeExchangeItemData } from '../util/apiUtils';
 
-	// reshapes a few cases of abnormally formatted API data
-	if (name.split(' ')[1] === 'Exchange') {
-		name = name.split(' ')[0];
-	}
-	if (exchange.id === 'kraken') {
-		url = 'https://www.kraken.com/';
-	}
+const ExchangeItem = ({ exchange }) => {
+	const { id, name, country, trust_score_rank, url } =
+		normalizeExchangeItemData(exchange);
 
 	return (
 		<div className='exchange-item' data-testid='exchange-item'>

@@ -12,14 +12,20 @@ Top Cryptocurrency Exchanges Ranked by Trust Score
 1. npm test
 2. a
 
+## Dependencies
+
+1. create-react-app
+2. msw
+3. react-query
+
 ## Deploy Location
 
 https://stakefish-sample.vercel.app/
 
 ## Notes
 
-- Prettier through VSCode
-- Lint through create react app
+- VSCode Prettier
+- Create React App ESLint
 
 ## Author Resume Location
 

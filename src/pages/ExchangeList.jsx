@@ -11,8 +11,8 @@ const ExchangeList = () => {
 		fetch('https://api.coingecko.com/api/v3/exchanges?per_page=10')
 			.then((response) => response.json())
 			.then((exchanges) => setExchanges(exchanges))
+			.then(() => setLoading(false))
 			.catch((error) => console.log(error));
-		setLoading(false);
 	}, []);
 
 	if (loading) {

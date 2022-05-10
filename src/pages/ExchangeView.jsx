@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Spinner from '../components/Spinner';
+import { normalizeExchangeViewData } from '../util/apiUtils';
 import '../style/ExchangeView.css';
 
 const ExchangeView = () => {
@@ -12,15 +13,15 @@ const ExchangeView = () => {
 		fetch(`https://api.coingecko.com/api/v3/exchanges/${params.exchangeId}`)
 			.then((response) => response.json())
 			.then((exchange) => setExchange(exchange))
+			.then(() => setLoading(false))
 			.catch((error) => console.log(error));
-		setLoading(false);
 	}, [params.exchangeId]);
 
 	if (loading) {
 		return <Spinner />;
 	}
 
-	let {
+	const {
 		name,
 		image,
 		facebook_url,
@@ -31,21 +32,7 @@ const ExchangeView = () => {
 		description,
 		country,
 		url,
-	} = exchange;
-
-	// reshapes a few cases of abnormally formatted API values
-	if (name?.split(' ')[1] === 'Exchange') {
-		name = name.split(' ')[0];
-	}
-	if (name === 'Kraken') {
-		url = 'https://www.kraken.com/';
-	}
-	if (facebook_url && facebook_url?.split('').slice(0, 4).join('') !== 'http') {
-		facebook_url = `https://www.facebook.com/${facebook_url}/`;
-	}
-	if (reddit_url && reddit_url?.split('').slice(0, 4).join('') !== 'http') {
-		reddit_url = `https://www.reddit.com${reddit_url}`;
-	}
+	} = normalizeExchangeViewData(exchange);
 
 	return (
 		<div className='container bg-white'>
