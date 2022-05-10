@@ -42,8 +42,8 @@ const renderExchangeItem = () =>
 		}
 	);
 
-describe('<ExchangeList />', () => {
-	it('Render spinner when data is fetching', async () => {
+describe('ExchangeList', () => {
+	it('Renders spinner when data is fetching', async () => {
 		renderListComponent();
 		expect(screen.getByTestId('spinner-element')).toBeVisible();
 	});
@@ -51,7 +51,7 @@ describe('<ExchangeList />', () => {
 		renderListComponent();
 		expect(await screen.findByTestId('header-element')).toBeVisible();
 	});
-	it('Renders list item country', async () => {
+	it('Renders list item details', async () => {
 		renderListComponent();
 		expect(await screen.findByText('Belize')).toBeVisible();
 		expect(await screen.findByText(/OKX/i)).toBeVisible();
@@ -63,7 +63,7 @@ describe('<ExchangeList />', () => {
 	});
 });
 
-describe('<ExchangeView />', () => {
+describe('ExchangeView', () => {
 	it('Renders spinner when data is fetching', async () => {
 		renderViewComponent();
 		expect(screen.getByTestId('spinner-element')).toBeVisible();
@@ -92,7 +92,7 @@ describe('ExchangeListItem', () => {
 	});
 });
 
-describe('<App />', () => {
+describe('App', () => {
 	it('Renders Navbar in App component', () => {
 		render(<App />);
 		const navElement = screen.getByTestId('nav-element');
